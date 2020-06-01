@@ -25,7 +25,7 @@ class Compile {
     Array.from(attrs).forEach(item => {
       const name = item.name;
       const val = item.value;
-      if (name.indexOf('k-') > -1) {
+      if (name.indexOf('v-') > -1) {
         const dir = name.substring(2);
         this[dir] && this[dir](node, val)
       } else if (name.indexOf('@') > -1) {
